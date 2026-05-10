@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<a href="index.html">← Back to Hub</a>
+<head>
+<meta charset="UTF-8">
+<title>Duty Manager Walk Sunday PM</title>
+
+<div style="text-align:center; margin-bottom:10px;">
+  <a href="index.html" style="
+    background:#FFDA1A;
+    color:#0058A3;
+    padding:10px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;">
+    ← Back to Hub
+  </a>
+</div>
+
+<style>
+* {
+    font-family: Arial, sans-serif;
+}
+body {
+  margin: 0;
+  background: #007CC1;
+}
+#signaturePad {
+  border: 2px solid black;
+  width: 100%;
+  height: 150px;
+  background: white;
+  touch-action: none;
+}
+header {
+  position: relative;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* LOGO */
+header img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 180px;
+}
+
+.container {
+    background: white;
+    padding: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    background: #FFDA1A;
+    padding: 8px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 10px;
+}
+
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+.radio-cell {
+  text-align: center;
+}
+
+.radio-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 5px;
+}
+.table-row {
+  display: flex;
+  gap: 20px;
+}
+
+
+input, select {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+
+.check {
+  transform: scale(1.2);
+}
+
+#progressWrap {
+  height: 20px;
+  background: #ccc;
+  margin: 10px 0;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: green;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.webp">
+    <h1>Duty Manager Walk Sunday PM</h1>
+    <div id="timer"></div>
+</header>
+<div class="container">
+
+<!-- DATE -->
+<table>
+<tr>
+<td>Date<br><input type="date" id="date"></td>
+<td>Duty Manager<br><input></td>
+</tr>
+</table>
+
+
+<!-- ROLL CALL -->
+<h2>Roll Call</h2>
+
+<div class="table-row">
+
+<!-- AM -->
+<table>
+<tr>
+<th>Role (AM)</th>
+<th>Name</th>
+</tr>
+
+<tr><td>Duty 1 (7771)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option><option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Duty 2 (7772)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Showrooms (6581)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Markethall (6611)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Guest Relations (7003)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>IKEA Food (6509)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Fulfilment (6578)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Night Fullfilment (7771)</td><td><select><option></option><option>Tony Graham</option><option>Matthew Sullivan</option><option>Matt Weatherley</option><option>Gary Newman</option></select></td></tr>
+
+</table>
+
+<!-- PM -->
+<table>
+<tr>
+<th>Role (PM)</th>
+<th>Name</th>
+</tr>
+
+<tr><td>Duty 1 (7771)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option><option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Duty 2 (7772)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Showrooms (6581)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Markethall (6611)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Guest Relations (7003)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>IKEA Food (6509)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Fulfilment (6578)</td><td><select><option></option><option>Joe Goldwater</option><option>Jason Liang</option><option>Alisha Hitchcock</option><option>Marius Klin</option><option>Kerry Millen</option><option>Lorraine Davies</option><option>Catherine Rogers</option><option>Natalie Morgan</option><option>Lisa Fox</option><option>Megan Nelson</option>
+<option>Rachael Light</option><option>Amy Butterworth</option><option>Adam Baker</option><option>Leo Kniazev</option><option>Simon Lidbury</option><option>Juha Islam</option><option>Jonny Kirk</option><option>Sammy Luff</option><option>Claire Snape</option><option>Charlotte Hare</option><option>Katy Ware</option><option>James Brown</option><option>Gareth Williams</option><option>Katy Quinn</option><option>Lee Haydon</option><option>Fergus Moore</option><option>Ed Stapleton</option><option>Joy Chanter</option><option>Agata Campanella</option><option>Phil Roebuck</option><option>Kate Horne</option><option>Carl Moys</option><option>Lucy Ellis</option><option>Jane Forrester</option><option>Sophie Woodgate</option><option>Samuel Luff</option><option>Emanuele Di Stefano</option><option>Edward Stone</option><option>Katie Aris</option><option>Joanne Ewings</option><option>Robin Mayes</option><option>Natasha Squires</option><option>Lloyd Beech</option><option>Michael Cash</option></select></td></tr>
+<tr><td>Night Fullfilment (7771)</td><td><select><option></option><option>Tony Graham</option><option>Matthew Sullivan</option><option>Matt Weatherley</option><option>Gary Newman</option></select></td></tr>
+
+</table>
+
+</div>
+
+<!-- PRE OPEN -->
+
+<table id="checks">
+
+<!-- STORE WALK -->
+<h2>Store Walk Checks</h2>
+<table id="walks">
+<tr><th>Check</th><th>✔</th></tr>
+</table>
+
+<!-- CLOSING -->
+<h2>Closing Checks</h2>
+<table>
+<tr><td>16:00</td><td>Check restaurant has closed and pre-closing announcement has gone out</td><td><input type="checkbox" class="check"></td></tr>
+<tr><td>16:15</td><td>Check final pre-closing annoucement has gone out</td><td><input type="checkbox" class="check"></td></tr>
+<tr><td>16:30</td><td>Lock store entrance and begin store walk</td><td><input type="checkbox" class="check"></td></tr>
+<tr><td>17:30</td><td>Once guests are out of the store, check the exits are locked</td><td><input type="checkbox" class="check"></td></tr>
+</table>
+
+<div id="progressWrap"><div id="progress"></div></div>
+<!-- DEVIATION LIST -->
+<h2>Deviation List</h2>
+
+<table id="deviationTable">
+<tr>
+  <th>Location</th>
+  <th>Issue</th>
+  <th>Contact</th>
+  <th>Resolved</th>
+</tr>
+</table>
+
+<button onclick="addDeviation()">+ Add Issue</button>
+<!-- SIGNATURE -->
+<h2>Signature</h2>
+
+<canvas id="signaturePad"></canvas>
+<button onclick="clearSignature()">Clear Signature</button>
+<button id="finishBtn" onclick="finishWalk()" disabled>
+  Finish / Export
+</button>
+
+
+</div>
+
+
+
+<script>
+
+/* DEVIATIONS */
+function addDeviation() {
+  const table = document.getElementById("deviationTable");
+  const rowCount = table.rows.length;
+
+  const row = document.createElement("tr");
+
+  row.innerHTML = `
+    <td><input type="text" placeholder="Location"></td>
+    <td><textarea placeholder="Issue..." style="width:100%; height:40px;"></textarea></td>
+    <td><input type="text" placeholder="Contact"></td>
+    <td class="radio-cell">
+      <label class="radio-inline">
+        <input type="radio" name="resolved${rowCount}"> Yes
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="resolved${rowCount}"> No
+      </label>
+    </td>
+  `;
+
+  table.appendChild(row);
+}
+
+/* TIMER (4 HOURS) */
+let time = 4 * 60 * 60; // 4 hours in seconds
+
+function runTimer() {
+  const h = Math.floor(time / 3600);
+  const m = Math.floor((time % 3600) / 60);
+  const s = time % 60;
+
+  document.getElementById("timer").innerText =
+    `Time remaining: ${h}h ${m}m ${s}s`;
+
+  if (time > 0) {
+    time--;
+    setTimeout(runTimer, 1000);
+  } else {
+    document.getElementById("timer").innerText = "Time complete";
+  }
+}
+
+runTimer();
+const preChecks = [
+];
+
+const walkChecks = [
+"Check the car park is clean and well maintained","Check all fire routes and escape doors have no obstructions","Check Entrance toilets are clean",
+"Check Showrooms clean and full","Check Restaurant is clean and full","Check Restaurant toilets are clean",
+"Check Markethall is clean and full","Check Self-serve is clean and full","Check queues at Checkouts",
+"Check click and collect area"
+];
+
+const table = document.getElementById("checks");
+preChecks.forEach(c=>{
+  const row=document.createElement("tr");
+  row.innerHTML=`<td>${c[0]}</td><td>${c[1]}</td><td><input type="checkbox" class="check" onchange="progress()"></td>`;
+  table.appendChild(row);
+});
+
+const walk=document.getElementById("walks");
+walkChecks.forEach(c=>{
+  const row=document.createElement("tr");
+  row.innerHTML=`<td>${c}</td><td><input type="checkbox" class="check" onchange="progress()"></td>`;
+  walk.appendChild(row);
+});
+
+function progress(){
+  const checks = document.querySelectorAll(".check");
+  const done = [...checks].filter(c => c.checked).length;
+
+  const percent = (done / checks.length) * 100;
+  document.getElementById("progress").style.width = percent + "%";
+
+  /* ✅ ENABLE ONLY WHEN ALL CHECKED */
+  const allComplete = (done === checks.length);
+  document.getElementById("finishBtn").disabled = !allComplete;
+}
+
+function finishWalk() {
+  const checks = document.querySelectorAll(".check");
+  const allComplete = [...checks].every(c => c.checked);
+
+  if (!allComplete) {
+    alert("You must complete all Pre-Opening and Store Walk checks");
+    return;
+  }
+
+  window.print();
+}
+document.getElementById("date").valueAsDate=new Date();
+/* SIGNATURE */
+const canvas = document.getElementById("signaturePad");
+const ctx = canvas.getContext("2d");
+
+let drawing = false;
+
+function resizeCanvas() {
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+
+resizeCanvas();
+
+canvas.addEventListener("mousedown", startDraw);
+canvas.addEventListener("touchstart", startDraw);
+
+function startDraw(e) {
+  drawing = true;
+  ctx.beginPath();
+  draw(e);
+}
+
+canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("touchmove", draw);
+
+function draw(e) {
+  if (!drawing) return;
+
+  const rect = canvas.getBoundingClientRect();
+  const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+  const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+
+  ctx.lineWidth = 2;
+  ctx.lineCap = "round";
+  ctx.lineTo(x, y);
+  ctx.stroke();
+}
+
+canvas.addEventListener("mouseup", stopDraw);
+canvas.addEventListener("mouseleave", stopDraw);
+canvas.addEventListener("touchend", stopDraw);
+
+function stopDraw() {
+  drawing = false;
+}
+
+function clearSignature() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+</script>
+
+</body>
+</html>

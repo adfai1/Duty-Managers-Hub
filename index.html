@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IKEA Duty Management Hub</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0058A3;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: #FFDA1A;
+    color: #0058A3;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+/* ✅ BUTTON STYLE */
+.btn {
+    display: block;
+    width: 300px;
+    margin: 15px auto;
+    padding: 16px;
+    background-color: #FFDA1A;
+    color: #0058A3;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+/* ✅ SELECTION BOX */
+.selection-box {
+    width: 300px;
+    margin: 15px auto;
+    padding: 5px;
+
+    
+}
+
+.option-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 5px;
+    border: 2px solid #FFDA1A;       /* ✅ yellow border */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;   /* ✅ looks like button already */
+    color: white;
+    min-width: 90px;                 /* ✅ keeps size consistent */
+    text-align: center;
+}
+
+/* ✅ SELECTED STATE (just changes colour) */
+.option-btn.selected {
+    background-color: #FFDA1A;
+    color: #0058A3;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>Duty Management Hub</header>
+
+<div class="container">
+
+<!-- ✅ DAY -->
+<div class="selection-box">
+    <div class="option-btn" onclick="selectOption('day', 'Week', this)">Weekday</div>
+    <div class="option-btn" onclick="selectOption('day', 'Saturday', this)">Saturday</div>
+    <div class="option-btn" onclick="selectOption('day', 'Sunday', this)">Sunday</div>
+</div>
+
+<!-- ✅ SHIFT -->
+<div class="selection-box">
+    <div class="option-btn" onclick="selectOption('shift', 'AM', this)">AM</div>
+    <div class="option-btn" onclick="selectOption('shift', 'PM', this)">PM</div>
+</div>
+
+<!-- ✅ BUTTONS -->
+<button class="btn" onclick="goToChecklist('duty')">
+    Duty Manager Checklist
+</button>
+
+<button class="btn" onclick="goToChecklist('showrooms')">
+    Showrooms Responsible Checklist
+</button>
+
+<button class="btn" onclick="goToChecklist('markethall')">
+    Markethall Responsible Checklist
+</button>
+
+<button class="btn" onclick="goToChecklist('gr')">
+    Guest Relations Responsible Checklist
+</button>
+
+</div>
+
+<script>
+
+/* ✅ STORE SELECTIONS */
+let selectedDay = null;
+let selectedShift = null;
+
+/* ✅ BUTTON SELECT FUNCTION */
+function selectOption(type, value, element) {
+
+    if (type === "day") {
+        selectedDay = value;
+
+        // Remove previous selection
+        document.querySelectorAll('.selection-box:nth-of-type(1) .option-btn')
+            .forEach(btn => btn.classList.remove("selected"));
+    }
+
+    if (type === "shift") {
+        selectedShift = value;
+
+        document.querySelectorAll('.selection-box:nth-of-type(2) .option-btn')
+            .forEach(btn => btn.classList.remove("selected"));
+    }
+
+    element.classList.add("selected");
+}
+
+/* ✅ NAVIGATION */
+function goToChecklist(type) {
+
+    if (!selectedDay || !selectedShift) {
+        alert("Please select Day and Shift");
+        return;
+    }
+
+    let url = "";
+
+    if (type === "duty") {
+        url = `Duty Managers Check_${selectedDay}_${selectedShift}.html`;
+    }
+
+    if (type === "showrooms") {
+        url = `Showrooms Responsible Check_${selectedDay}_${selectedShift}.html`;
+    }
+
+    if (type === "markethall") {
+        url = `Market Hall Responsible Check_${selectedDay}_${selectedShift}.html`;
+    }
+
+    if (type === "gr") {
+        url = `GR Responsible Check_${selectedDay}_${selectedShift}.html`;
+    }
+
+    window.location.href = url;
+}
+<a href="Duty Managers Check-Week-AM.html">Saturday AM</a>
+</script>
+
+</body>
+</html>
