@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<a href="index.html">← Back to Hub</a>
+<head>
+<meta charset="UTF-8">
+<title>Showroom Responsible Checklist Sunday PM</title>
+
+
+<div style="text-align:center; margin-bottom:10px;">
+  <a href="index.html" style="
+    background:#FFDA1A;
+    color:#0058A3;
+    padding:10px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;">
+    ← Back to Hub
+  </a>
+</div>
+
+
+<style>
+* {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #007CC1;
+}
+
+header {
+    position: relative;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+
+/* LOGO */
+header img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 180px;
+}
+
+.container {
+    background: white;
+    padding: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    background: #FFDA1A;
+    padding: 8px;
+    text-align: center;
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 10px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    font-size: 16px;
+}
+
+/* TEXTAREA */
+textarea {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    resize: none;
+    overflow-y: auto;
+}
+
+/* CHECKBOX */
+.check {
+    transform: scale(1.2);
+    display: block;
+    margin: auto;
+}
+
+/* PROGRESS */
+#progressWrap {
+    background: #ccc;
+    height: 25px;
+    margin: 15px 0;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: green;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:disabled {
+    background: #999;
+    color: #444;
+}
+
+/* SIGNATURE */
+#signaturePad {
+    border: 2px solid black;
+    width: 100%;
+    height: 150px;
+    background: white;
+    touch-action: none;
+}
+
+/* ✅ RADIO SIDE-BY-SIDE */
+.radio-cell {
+    text-align: center;
+}
+
+.radio-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0 8px;
+}
+
+.radio-inline input {
+    transform: scale(1.2);
+}
+
+.important-title h2 {
+  text-align: center;
+}
+
+.important-grid td {
+  text-align: center;
+ 
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.webp">
+    <h1>Showroom Responsible Checklist Sunday PM</h1>
+    <div id="timer"></div>
+</header>
+
+<div class="container">
+
+<!-- IMPORTANT NUMBERS -->
+<div class="important-title"><h2>IMPORTANT NUMBERS</h2></div>
+<table class="important-grid">
+<tbody><tr>
+<td>Emergency 3737</td>
+<td>Wanzl 7091</td>
+<td>Smaland 6232</td>
+<td>Facilities 7100</td>
+<td>Noonans 7070</td>
+</tr>
+</tbody></table>
+<!-- DATE -->
+<table>
+<tr>
+
+<!-- ROLE IN AN EMERGENCY -->
+
+<div class="important-title">
+  <h2>Role in an Emergency</h2>
+</div>
+
+<table class="important-grid">
+<tbody><tr>
+<td><strong>CODE 1000</strong><BR> Prepare to evacuate, assign co-workers to fire doors</td>
+<td><strong>Evacuation</strong><BR> Clear Showrooms of Customers, Take Department Role Call at assembly point</td>
+<td><strong>Code 99</strong><BR> Report to location, assist Duty manager in search</td>
+<td><strong>IKEA Time Check</strong><BR> Meet at agreed location in store</td>
+<td><strong>First Aid</strong><BR> Call lodge (6000) and dispatch first aider, inform Duty 1 (7771)</td>
+</tr>
+</tbody></table>
+
+<!-- DATE -->
+<table>
+<tr>
+
+<!-- DATE -->
+<table>
+<tr>
+<td><strong>Date</strong><br><input type="date" id="date"></td>
+
+<td><strong>Responsible</strong><br><input></td>
+</tr>
+</table>
+
+<!-- DEPARTMENTS -->
+<h2>Department Responsibles</h2>
+
+<table>
+<tr>
+<th style="width:30%">Department</th>
+<th style="width:60%">Responsible</th>
+</tr>
+
+<tr><td>Living Rooms (6351)</td><td><input></td></tr>
+<tr><td>Kitchens (6401)</td><td><input></td></tr>
+<tr><td>Work IKEA (6361)</td><td><input></td></tr>
+<tr><td>Bedrooms (6391)</td><td><input></td></tr>
+<tr><td>Childrens (6371)</td><td><input></td></tr>
+</table>
+
+<!-- SAFETY -->
+<h2>Safety Checks</h2>
+
+<table id="safetyTable">
+<tr>
+<th style="width:20%">Action</th>
+<th style="width:10%">✔</th>
+<th style="width:40%">Comments</th>
+</tr>
+</table>
+
+<!-- FUNCTIONAL -->
+<h2>Functional Checks</h2>
+
+<table id="functionalTable">
+<tr>
+<th style="width:20%">Action</th>
+<th style="width:10%">✔</th>
+<th style="width:40%">Comments</th>
+</tr>
+</table>
+
+<!-- PROGRESS -->
+<div id="progressWrap">
+<div id="progress"></div>
+</div>
+
+<!-- DEVIATIONS -->
+<h2>Deviations</h2>
+
+<table id="deviationTable">
+<tr>
+<th>Location</th>
+<th>Issue</th>
+<th>Contact</th>
+<th>Resolved</th>
+</tr>
+</table>
+
+<button onclick="addRow()">+ Add Issue</button>
+
+<!-- SIGNATURE -->
+<h2>Signature</h2>
+
+<canvas id="signaturePad"></canvas>
+
+<button onclick="clearSignature()">Clear Signature</button>
+
+<!-- FINISH -->
+<button id="finishBtn" onclick="window.print()" disabled>
+Finish / Export
+</button>
+
+</div>
+
+<script>
+
+/* CHECK LISTS */
+const safetyItems = [
+"Are all products that include anti-tripping protection are displayed with it fitted?","Are candles that have wicks removed and displayed at the recommended distance apart?","Is there any pallet trucks or ladders left unattended - prevention of injury due to climbing or falling from height","Is the fullfilment shutter door down?",
+"Are doors free from obstruction clear access of the width of the door from main walkway?","Are all fire extinguishers and fire alarm call points free from obstruction and clearly visible","Are all products in showcases on end podia and display shelves are correctly assembled and firmly fixed?",
+"Is there risk of tumbling, falling or collapsing items?","Are there are no hazards for children below 1.2m?","Are all power sources and power drops leading down from ceiling are positioned and secured",
+"Is there a risk of items falling between or under barriers to floor below?"
+];
+
+const functionalItems = [
+"Are departments adequatley Staffed?","Are Displays clean, priced & in good condition?",
+"Are Displays clean, priced & in good condition?",
+"Are shopping Tools available?","Is the 320 screen is clear? ","Is loose hands clear?",
+"Is the walkway stock at high levels?","Has all evidence of replenishment removed?",
+"Are Twalls/Crossover & Add-on bins filled?","Are banners straight & in good condition?",
+"Are brochures & buying guides full?","Is First five & Showroom entrance secured?",
+"Has sickness or Absense reported to Line managers?"];
+
+
+/* BUILD TABLES */
+function buildTable(id, items) {
+    const table = document.getElementById(id);
+
+    items.forEach(item => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${item}</td>
+            <td><input type="checkbox" class="check" onchange="updateProgress()"></td>
+            <td><textarea placeholder="Comments..."></textarea></td>
+        `;
+
+        table.appendChild(row);
+    });
+}
+
+buildTable("safetyTable", safetyItems);
+buildTable("functionalTable", functionalItems);
+
+/* ADD ROW */
+function addRow() {
+    const table = document.getElementById("deviationTable");
+    const rowCount = table.rows.length;
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td><input></td>
+        <td><textarea placeholder="Comments..."></textarea></td>
+        <td><input></td>
+        <td class="radio-cell">
+            <label class="radio-inline">
+                <input type="radio" name="resolved${rowCount}"> Yes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="resolved${rowCount}"> No
+            </label>
+        </td>
+    `;
+
+    table.appendChild(row);
+}
+
+/* PROGRESS + VALIDATION */
+function updateProgress() {
+    const checks = document.querySelectorAll(".check");
+    const done = [...checks].filter(c => c.checked).length;
+
+    document.getElementById("progress").style.width =
+        ((done / checks.length) * 100) + "%";
+
+    const allChecked = (done === checks.length);
+    const signed = isSigned();
+
+    document.getElementById("finishBtn").disabled =
+        !(allChecked && signed);
+}
+
+/* TIMER */
+let time = 4 * 60 * 60;
+
+function runTimer() {
+    const h = Math.floor(time / 3600);
+    const m = Math.floor((time % 3600) / 60);
+    const s = time % 60;
+
+    document.getElementById("timer").innerText =
+        `Time remaining: ${h}h ${m}m ${s}s`;
+
+    if (time > 0) {
+        time--;
+        setTimeout(runTimer, 1000);
+    }
+}
+
+/* SIGNATURE */
+const canvas = document.getElementById("signaturePad");
+const ctx = canvas.getContext("2d");
+
+let drawing = false;
+
+function resizeCanvas() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+}
+resizeCanvas();
+
+canvas.addEventListener("mousedown", startDraw);
+canvas.addEventListener("touchstart", startDraw);
+
+function startDraw(e) {
+    drawing = true;
+    ctx.beginPath();
+    draw(e);
+}
+
+canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("touchmove", draw);
+
+function draw(e) {
+    if (!drawing) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+
+    ctx.lineWidth = 2;
+    ctx.lineCap = "round";
+    ctx.lineTo(x, y);
+    ctx.stroke();
+}
+
+canvas.addEventListener("mouseup", stopDraw);
+canvas.addEventListener("mouseleave", stopDraw);
+canvas.addEventListener("touchend", stopDraw);
+
+function stopDraw() {
+    drawing = false;
+    updateProgress();
+}
+
+function clearSignature() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    updateProgress();
+}
+
+function isSigned() {
+    const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    return pixels.some(p => p !== 0);
+}
+
+/* DATE */
+document.getElementById("date").valueAsDate = new Date();
+
+/* START */
+runTimer();
+
+</script>
+
+</body>
+</html>
