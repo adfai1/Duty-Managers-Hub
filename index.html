@@ -152,19 +152,19 @@ function goToChecklist(type) {
     let url = "";
 
     if (type === "duty") {
-        url = `Duty Managers Check_${selectedDay}_${selectedShift}.html`;
+        url = `Duty Managers Check_${selectedDay}-${selectedShift}.html`;
     }
 
     if (type === "showrooms") {
-        url = `Showrooms Responsible Check_${selectedDay}_${selectedShift}.html`;
+        url = `Showrooms Responsible Check_${selectedDay}-${selectedShift}.html`;
     }
 
     if (type === "markethall") {
-        url = `Market Hall Responsible Check_${selectedDay}_${selectedShift}.html`;
+        url = `Market Hall Responsible Check_${selectedDay}-${selectedShift}.html`;
     }
 
     if (type === "gr") {
-        url = `GR Responsible Check_${selectedDay}_${selectedShift}.html`;
+        url = `GR Responsible Check-${selectedDay}_${selectedShift}.html`;
     }
 
     window.location.href = url;
